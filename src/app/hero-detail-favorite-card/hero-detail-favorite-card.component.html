@@ -1,0 +1,21 @@
+<img [src]="character.thumbnail.path+'.'+character.thumbnail.extension" (click)="loadSeries()" id="img" alt="Avatar" class="avatar-img rounded-circle" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+mdbWavesEffect>
+ 
+ <div  id="carousel" mdbModal #frame="mdbModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div role="presentation">
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header" id="content">
+            <mdb-carousel *ngIf="series.length > 0" class="carousel slide" [animation]="'fade'">
+                <mdb-carousel-item *ngFor="let serie of series">
+                  <div class="col">
+                    <h5 style="text-align: center; color: white" class="modal-title" id="title">{{ serie.title }}</h5>
+                    <img class="d-block w-100" [src]="serie.thumbnail.path+'.'+serie.thumbnail.extension">
+                  </div>
+                </mdb-carousel-item>
+              </mdb-carousel>
+      </div>
+    </div>
+  </div>
+  </div>

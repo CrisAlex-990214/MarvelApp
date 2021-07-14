@@ -1,0 +1,30 @@
+<div id="content" class="row">
+    <app-filter
+    (textSearch)="filterByText($event)"
+    (byName)="filterByAttribute($event)"
+    (featured)="showCharacterImages($event)">
+    </app-filter>
+    <div id="list" class="row" *ngIf="!loading">
+        <div *ngFor="let character of charactersShowed;index as i">
+                <app-hero-card
+                [character]="character"
+                [featured]="featured"
+                [favoriteComicIdsToAddTag]="favoriteComicIdsToAddTag"
+                (characterFavoriteId)="updateFavoriteList($event)"
+                (updateCharacterComics)="updateCharacterComics($event,i)">
+                </app-hero-card>
+        </div>
+    </div>
+    <div *ngIf="loading" class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div class="row" id="pag" >
+    <app-pagination
+    [currentPage]="currentPage"
+    [pageSize]="pageSize"
+    [charactersCount]="charactersCount"
+    (page)="changeCharactersShowed($event)">
+    </app-pagination>
+    </div>

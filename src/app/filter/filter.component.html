@@ -1,0 +1,15 @@
+<div id="title-filters" class="row">
+  <h3 id="title"> Characters </h3>
+  <div id="filters" class="row">
+    <div id="search">
+      <input class="form-control" [ngModel]='text' type="search" placeholder="Search characters" aria-label="Search"
+            #searchInput (input)="searchText(searchInput.value)" mdbInput>
+    </div>
+      <p id="label"> Filter By</p>
+      <button mdbBtn type="button" size="sm" color="indigo" class="waves-light" (click)="byAttribute(true)"
+              mdbWavesEffect>Name</button>
+      <button mdbBtn type="button" size="sm" color="indigo" class="waves-light" (click)="byAttribute(false)"
+             mdbWavesEffect>Date</button>
+  </div>
+</div>
+

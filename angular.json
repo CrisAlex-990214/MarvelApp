@@ -24,7 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": []
           },
@@ -118,7 +120,126 @@
           }
         }
       }
+    },
+    "APIMarvelTest": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/apimarvel-test",
+      "sourceRoot": "projects/apimarvel-test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/APIMarvelTest",
+            "index": "projects/apimarvel-test/src/index.html",
+            "main": "projects/apimarvel-test/src/main.ts",
+            "polyfills": "projects/apimarvel-test/src/polyfills.ts",
+            "tsConfig": "projects/apimarvel-test/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/apimarvel-test/src/favicon.ico",
+              "projects/apimarvel-test/src/assets"
+            ],
+            "styles": [
+              "projects/apimarvel-test/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/apimarvel-test/src/environments/environment.ts",
+                  "with": "projects/apimarvel-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "APIMarvelTest:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "APIMarvelTest:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "APIMarvelTest:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/apimarvel-test/src/test.ts",
+            "polyfills": "projects/apimarvel-test/src/polyfills.ts",
+            "tsConfig": "projects/apimarvel-test/tsconfig.spec.json",
+            "karmaConfig": "projects/apimarvel-test/karma.conf.js",
+            "assets": [
+              "projects/apimarvel-test/src/favicon.ico",
+              "projects/apimarvel-test/src/assets"
+            ],
+            "styles": [
+              "projects/apimarvel-test/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/apimarvel-test/tsconfig.app.json",
+              "projects/apimarvel-test/tsconfig.spec.json",
+              "projects/apimarvel-test/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/apimarvel-test/e2e/protractor.conf.js",
+            "devServerTarget": "APIMarvelTest:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "APIMarvelTest:serve:production"
+            }
+          }
+        }
+      }
     }
   },
-  "defaultProject": "marvel-app"
+  "defaultProject": "marvel-app",
+  "cli": {
+    "analytics": false
+  }
 }

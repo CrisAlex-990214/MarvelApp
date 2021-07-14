@@ -1,0 +1,12 @@
+#image {
+    width: 208px;
+    height: 208px;
+}
+
+#frameModalTop {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 288px;
+    margin-left: 16px;
+}

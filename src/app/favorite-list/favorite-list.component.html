@@ -1,0 +1,33 @@
+<div id="list">
+    <h4 id="title" style="text-align:center"> My favorites</h4>
+    <div id="selection" class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        
+        <button mdbBtn (click)="charactersSelected(true)" id="charactersDOM"
+        type="button" class="waves-light" mdbWavesEffect>Characters</button>
+        
+        <button id="comics" mdbBtn (click)="charactersSelected(false)" 
+        type="button" class="waves-light" mdbWavesEffect>Comics</button>
+    </div>
+    
+    <mdb-card class="example-1 scrollbar-ripe-malinka">
+
+        <div *ngIf="charactersShowed" >
+            <div *ngFor="let character of characters">
+                <app-hero-favorite-card
+                [character]="character"
+                [featured]="featured"
+                (favoriteCharacterIdToRemove)="removeFavoriteCharacter($event)">
+                </app-hero-favorite-card>
+            </div>
+        </div>
+        <div *ngIf="!charactersShowed" >
+            <div *ngFor="let comic of favoriteComics">
+                <app-comic-favorite-card
+                [comic]="comic"
+                (favoriteComicIdToRemove)="removeFavoriteComic($event)">
+                </app-comic-favorite-card>
+            </div>
+        </div>
+        
+    </mdb-card>
+</div>

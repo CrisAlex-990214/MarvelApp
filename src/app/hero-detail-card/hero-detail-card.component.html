@@ -1,0 +1,10 @@
+<img [src]="character.thumbnail.path+'.'+character.thumbnail.extension" id="image" alt="Avatar" class="avatar-img rounded-circle" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+mdbWavesEffect>
+
+<div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+  <app-hero-modal-card
+    [character]= "character"
+  >
+  </app-hero-modal-card>
+</div>

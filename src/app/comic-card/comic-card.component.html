@@ -1,0 +1,25 @@
+<div class="row">
+    <img [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension">
+    <div class="col">
+        <mdb-card id="content">
+            <h6 id="title"> {{ comic.title }}</h6>
+            <!--Card content-->
+            <mdb-card-body id="body">
+            <!--Text-->
+                <mdb-card-text>
+                  {{ comic.description || 'No description'}}
+                </mdb-card-text>
+            </mdb-card-body>   
+            
+            <button *ngIf="!comic.isFavorite" (click)="favoriteComic(true)" 
+            mdbBtn type="button" color="danger" rounded="true" mdbWavesEffect>
+                Add to favorites
+            </button>
+
+            <button *ngIf="comic.isFavorite"  (click)="favoriteComic(false)" 
+            mdbBtn type="button" color="primary" rounded="true" mdbWavesEffect>
+                Remove to favorites
+            </button>
+        </mdb-card>
+    </div>
+</div>

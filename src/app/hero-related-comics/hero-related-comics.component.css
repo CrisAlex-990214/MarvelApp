@@ -1,0 +1,13 @@
+a {
+    font-size: 12px;
+    color: white;
+  }
+
+#dropdown {
+  background-color: black;
+}
+
+#button {
+  background-color: rgb(172, 0, 15);
+  color: white;
+}

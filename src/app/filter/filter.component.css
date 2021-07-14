@@ -1,0 +1,46 @@
+#title-filters {
+    margin-top: 24px;
+    margin-left: 24px;
+}
+
+#search {
+    margin-top: 8px;
+    margin-left: 6px;
+}
+
+#filters {
+    margin-left: 368px;
+    background-color: coral;
+}
+
+#title {
+    color: yellow;
+    margin-left: 16px;
+    margin-top: 8px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
+}
+
+#comics  {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    size: 120%;
+    margin-left: 40px;
+    height: 90%;
+
+}
+
+#featured,#heroes {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    size: 120%;
+    margin-left: 20px;
+    height: 90%;
+}
+
+
+#label {
+    margin-left: 36px;
+    margin-right: 2px;
+    margin-top: 16px;
+    font-family: sans-serif;
+}

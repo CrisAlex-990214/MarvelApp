@@ -1,0 +1,32 @@
+ <div id="card">
+ <!--Card-->
+<mdb-card id="back">
+  
+    <!--Title-->
+    <mdb-card-title id="content" class="row">
+      <h6 id="title">{{ character.name }}</h6>
+    </mdb-card-title>
+    <!--Card modal-->
+
+      <app-hero-detail-card id="image"
+      [character] = "character">
+      </app-hero-detail-card>
+      <!--/.Card modal-->
+
+      <!--Card content-->
+      <mdb-card-body id="body" class="row">
+        
+          <app-comic-list
+          [character]="character"
+          [favoriteComicIdsToAddTag]="favoriteComicIdsToAddTag"
+          (updateCharacterCard)="updateCharacter($event)">
+          </app-comic-list>
+
+          <i id="favIcon" *ngIf="!character.isFavorite" class="far fa-heart fa-2x" (click)="favoriteCharacter(true)"></i>
+          <i id="favIcon" *ngIf="character.isFavorite" class="fas fa-heart fa-2x" (click)="favoriteCharacter(false)"></i>
+
+      </mdb-card-body>
+      <!--/.Card content-->
+  </mdb-card>
+  <!--/.Card-->
+</div>

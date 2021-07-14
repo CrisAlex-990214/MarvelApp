@@ -1,0 +1,12 @@
+#frameModalTop {
+    width: 90%;
+    height: 96%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#content {
+    position: fixed;
+    background-color: rgb(54, 47, 47);
+}

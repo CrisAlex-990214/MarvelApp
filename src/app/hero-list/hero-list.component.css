@@ -1,0 +1,27 @@
+#list {
+    margin-left: 18px;
+    padding: 6px;
+    padding-bottom: 24px;
+}
+
+#content {
+    background-image: url("https://animaders.com/wp-content/uploads/2019/05/marvel_animader.com_.jpg");
+    max-height: 1800px;
+    margin-bottom: 16px;
+    padding-bottom: 32px;
+}
+
+#pag {  
+    margin: auto;
+    width: 42%;
+    margin-top: 16px;
+}
+
+.spinner-border
+{
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}

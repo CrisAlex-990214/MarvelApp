@@ -1,0 +1,42 @@
+
+  .scrollbar-ripe-malinka::-webkit-scrollbar {
+    width: 12px;
+    background-color: #a19595;
+  }
+  .scrollbar-ripe-malinka::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(330deg, #e040a3 30%, #91124f 70%);
+  }
+  .example-1 {
+    position: relative;
+    overflow-y: scroll;
+    max-height: 984px;
+    padding: 8px;
+    margin-right: -4px;
+    background-color: rgb(223, 211, 211);
+  }
+
+  #title {
+    font-style: normal;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    color: khaki;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  #list {
+    padding: 16px;
+    background-image: linear-gradient(rgb(167, 8, 8), rgb(141, 141, 15));
+  }
+
+  #comics {
+    width: 142px;
+  }
+
+  #selection {
+    margin-bottom: 4px;
+  }
+  
+  #comics,#characters {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }

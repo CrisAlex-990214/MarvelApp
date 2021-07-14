@@ -1,0 +1,25 @@
+<img [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension" id="img" data-toggle="modal" data-target="#basicExample" (click)="frame.show()"
+mdbWavesEffect>
+ 
+ <div mdbModal #frame="mdbModal" class="modal fade" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+  <div id="modal" role="presentation">
+    <div class="modal-content" id="modal">
+      <!--Header--> 
+        <h5 class="modal-title" id="title">{{ comic.title }}</h5>
+        
+      <!--Body-->
+      <div class="modal-body">
+        <!--Card-->
+        <div>
+        <mdb-card>  
+            <!--Card image-->
+            <img [src]="comic.thumbnail.path+'.'+comic.thumbnail.extension">
+            <!--/.Card image-->  
+        </mdb-card>
+        </div>
+        <!--/.Card-->
+      </div>
+    </div>
+  </div>
+</div>

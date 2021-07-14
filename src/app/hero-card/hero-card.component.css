@@ -1,0 +1,41 @@
+#title {
+    margin: auto;
+    color: white;
+}
+
+#card {
+    width: 232px;
+    height: 232px;
+    margin-bottom: 72px;
+    margin-left: 16px;
+    margin-top: 24px;
+}
+
+#body {
+  margin-bottom: -8px;
+}
+
+#back {
+  background-color: rgb(54, 47, 47);
+}
+
+#content {
+  margin: auto;
+}
+
+#favIcon {
+  margin-left: 68px;
+  margin-top: 8px;
+}
+
+#body {
+  margin-top: -16px;
+}
+
+#image {
+  margin-left: 8px;
+}
+
+i {
+  color: white;
+}

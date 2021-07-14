@@ -1,0 +1,32 @@
+
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" id="modal">
+        <!--Header--> 
+          <h5 class="modal-title" id="title">{{ character.name }}</h5>
+          
+        <!--Body-->
+        <div class="modal-body">
+          <!--Card-->
+          <div>
+          <mdb-card>
+              
+              <!--Card image-->
+              <img id="detail-image" [src]="character.thumbnail.path+'.'+character.thumbnail.extension">
+              <!--/.Card image-->
+
+              <!--Card content-->
+              <mdb-card-body id="body">
+              <!--Text-->
+              <div id="content">
+                  <mdb-card-text>
+                    {{ character.description || 'No description provided'}}
+                  </mdb-card-text>
+              </div>
+              </mdb-card-body>    
+          </mdb-card>
+          </div>
+          <!--/.Card-->
+        </div>
+      </div>
+    </div>
+  

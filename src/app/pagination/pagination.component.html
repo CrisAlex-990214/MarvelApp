@@ -1,0 +1,14 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <button id="previous" [hidden]="_charactersCount==0 || currentPage==0" class="page-link"  (click)="goToPage(currentPage-1)" tabindex="-1" mdbWavesEffect>Previous</button>
+    </li>
+
+    <li *ngFor="let page of pages" [hidden]="_charactersCount==0" class="page-item">
+        <button name= "button" class="page-link" (click)="goToPage(page)" mdbWavesEffect> {{ page+1 }} </button>
+    </li>
+    <li class="page-item">
+      <button id="next" [hidden]="_charactersCount==0 || !morePages" class="page-link" (click)="goToPage(currentPage+1)" mdbWavesEffect>Next</button>
+    </li>
+  </ul>
+</nav>

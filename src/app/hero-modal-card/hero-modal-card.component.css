@@ -1,0 +1,23 @@
+#title {
+    margin: auto;
+    margin-bottom: -16px;
+    color: white;
+ }
+ 
+ #content {
+     margin-bottom: -24px;
+     width: 240px;
+     margin-left: -8px;
+     margin-right: -8px;
+     font-family: sans-serif;
+     font-weight: normal;
+ }
+ 
+
+ #modal {
+     background-color: rgb(54, 47, 47);
+ }
+
+  #body {
+     background-color: rgb(37, 32, 32);
+ }

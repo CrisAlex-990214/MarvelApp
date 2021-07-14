@@ -1,0 +1,14 @@
+
+<div class="btn-group" mdbDropdown>
+  <button id="button" mdbDropdownToggle mdbBtn size="sm" class="dropdown-toggle waves-light" type="button"
+   >
+    Related
+  </button>
+
+  <div class="dropdown-menu" id="dropdown">
+    <a class="dropdown-item" *ngFor="let character of relatedCharacters"> {{ character.name }}</a>
+  </div>
+
+
+
+
